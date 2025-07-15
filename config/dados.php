@@ -1,12 +1,12 @@
 <?php 
 
-return [
+$data = array (
     [
         'id' => 0,
         'nome' => 'Maria Eduarda',
         'idade' => 20,
         'email' => 'maria@gmail.com',
-        'senha' => '12345',
+        'senha' => '123456',
     ],
     [
         'id' => 1,
@@ -20,9 +20,11 @@ return [
         'nome' => 'Joao Gabriel',
         'idade' => 18,
         'email' => 'joao@gmail.com',
-        'senha' => '12345',
+        'senha' => 'teste',
     ]
-];
+);
+
+$jsonData = json_encode($data);
 
 
 ?>
