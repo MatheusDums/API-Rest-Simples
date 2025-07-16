@@ -28,7 +28,7 @@
     'id' => 3,
     'nome' => 'Maria',
     'idade' => 20,
-    'email' => 'maria@gmail.com',
+    'email' => 'maria@gmail.com.br',
     'senha' => '123456',
   ),
   4 => 
@@ -36,7 +36,7 @@
     'id' => 4,
     'nome' => 'Matheus',
     'idade' => 21,
-    'email' => 'dumss@icloud.com',
+    'email' => 'dumss@icloud.com.br',
     'senha' => '12345',
   ),
   5 => 
@@ -44,7 +44,7 @@
     'id' => 5,
     'nome' => 'Joao',
     'idade' => 18,
-    'email' => 'joao@gmail.com',
+    'email' => 'joao@gmail.com.r',
     'senha' => 'teste',
   ),
 );
