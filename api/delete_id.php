@@ -17,14 +17,15 @@ if(isset($_GET['id'])) {
     if (isset($elemento['id']) && $elemento['id'] == $id_remover ) {
         $indice_remover = $indice;
         break;
+        }
     }
-}
 
-if($indice_remover !== null) {
-    unset($data[$indice_remover]);
-}
+    if($indice_remover !== null) {
+        unset($data[$indice_remover]);
+    }
+    
     file_put_contents('../config/dados.php', '<?php $data = ' .  var_export($data, true) . ';');
-        
+            
     echo "Elemento com ID $id_remover removido com sucesso!";
 
 }
