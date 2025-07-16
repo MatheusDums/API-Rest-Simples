@@ -22,6 +22,5 @@ if($indice_remover !== null) {
 
     file_put_contents('../config/dados.php', '<?php $data = ' .  var_export($data, true) . ';');
         
-    echo "Elemento com ID $id_remover removido com sucesso!";
-
+    echo "Elemento Id $id_remover removido com sucesso!";
 ?>
