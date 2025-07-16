@@ -3,13 +3,17 @@ require_once '../config/index.php';
 require_once '../config/resposta.php';
 require_once '../config/dados.php';
 
-$dados = file_get_contents("php://input");
-$dados_log = json_decode($dados, true);
 
-$id_remover = $dados_log['id'];
-$indice_remover = null;
+if(isset($_GET['id'])) {
+    $id = $_GET['id'];
+    if($id < 0 || $id > count($data) -1 ) {
+    echo Response::json(400, 'error', 'Id não encontrado');
+    exit;
+} else {
+    $id_remover = $id;
+    $indice_remover = null;
 
-foreach($data as $indice => $elemento) {
+    foreach($data as $indice => $elemento) {
     if (isset($elemento['id']) && $elemento['id'] == $id_remover ) {
         $indice_remover = $indice;
         break;
@@ -19,9 +23,11 @@ foreach($data as $indice => $elemento) {
 if($indice_remover !== null) {
     unset($data[$indice_remover]);
 }
-
     file_put_contents('../config/dados.php', '<?php $data = ' .  var_export($data, true) . ';');
         
     echo "Elemento com ID $id_remover removido com sucesso!";
+
+}
+}
 
 ?>
