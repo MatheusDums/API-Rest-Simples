@@ -15,26 +15,31 @@ if(isset($_GET['id'])) {
     $dados = file_get_contents("php://input");
 
     $dados_log = json_decode($dados, true);
-
     $new_id = $dados_log['id'];
 
     $newData = [
-        $new_id = $dados_log['id'],
-        $new_nome = $dados_log['nome'],
-        $new_idade = $dados_log['idade'],
-        $new_email = $dados_log['email'],
-        $new_senha = $dados_log['senha']
+        "id" => $dados_log['id'],
+        "nome" => $dados_log['nome'],
+        "idade" => $dados_log['idade'],
+        "email" => $dados_log['email'],
+        "senha" => $dados_log['senha'],
     ];
 
-    
-    
+    if(isset($data[$new_id])) {
+        $data[$new_id] = $newData;
+        file_put_contents('../config/dados.php', '<?php $data = ' .  var_export($data, true) . ';');
+        echo Response::json(200, 'Dados alterados com succeso:', $data[$new_id]);
+    }
 
-
-
-    
 }
 
+    /*if ($data[$new_id] === $new_id) {
+        $data[$new_id] = $newData;
+    }
 
+    file_put_contents('../config/dados.php', '<?php $data = ' .  var_export($data[$new_id], true) . ';'); */
+
+/*     file_put_contents('../config/dados.php', '<?php $data =' . var_export($newData, true) . ';'); */
 
 
 /* --------------- */
@@ -66,10 +71,6 @@ if(isset($_GET['id'])) {
     } */
 
 /*         echo Response::json(200, 'success', $dataint); */
-
- 
-
-
 
 
 ?>
