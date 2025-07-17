@@ -33,45 +33,5 @@ if(isset($_GET['id'])) {
 
 }
 
-    /*if ($data[$new_id] === $new_id) {
-        $data[$new_id] = $newData;
-    }
-
-    file_put_contents('../config/dados.php', '<?php $data = ' .  var_export($data[$new_id], true) . ';'); */
-
-/*     file_put_contents('../config/dados.php', '<?php $data =' . var_export($newData, true) . ';'); */
-
-
-/* --------------- */
-
-   /*  $new_id = $dados_log['id'];
-
-    $new_nome = $dados_log['nome'];
-    $new_idade = $dados_log['idade'];
-    $new_email = $dados_log['email'];
-    $new_senha = $dados_log['senha'];
-
-    if(isset($data[$new_id])) {
-        $data[$new_id]['nome'] = $new_nome;
-    }
- */
-
-/* --------------- */
-        
-    /* foreach($data as $dataint) {
-    if(in_array($new_id, $dataint)) {
-        echo "Cadastro encontrado.";
-        $dataint['nome'] = $new_nome;
-        $dataint['idade'] = $new_idade;
-        $dataint['email'] = $new_email;
-        $dataint['senha'] = $new_senha;
-
-        echo $dataint['nome'];
-        break;
-    } */
-
-/*         echo Response::json(200, 'success', $dataint); */
-
-
 ?>
 

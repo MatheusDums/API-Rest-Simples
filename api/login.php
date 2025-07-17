@@ -29,38 +29,4 @@ if($encontrado === false) {
 
 }
 
-/* if(($email === $data[1]['email']) and ($senha === $data[1]['senha']) ) {
-    echo Response::json(200, 'success', $data[1]);
-} else {
-    echo Response::json(400, 'error', 'Credenciais Incorretas');
-}; */
-
-/* echo count($data); */
-
-/* for($i = 0; $i < count($data); $i++) {
-    if($data){
-        if($email === $data[$i]['email'] and $senha === $data[$i]['senha']){
-                echo Response::json(200, 'success', $data[$i]);
-            } else {
-
-            }
-        }
-    }
- */  
-
-/* $data = json_decode($jsonData, true);
-if($data) {
-    $email = $data['email'];
-    echo "O email digitado foi " . $email;
-} else {
-    echo "erro";
-} */
-
-/* if(($email === $data[1]['email']) and ($senha === $data[1]['senha']) ) {
-    echo Response::json(200, 'success', $data[1]);
-} else {
-    echo Response::json(400, 'error', 'Credenciais Incorretas');
-};
- */
-
 ?>
