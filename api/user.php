@@ -2,7 +2,19 @@
 require_once '../config/index.php';
 require_once '../config/resposta.php';
 require_once '../config/dados.php';
+require_once '../config/conector.php';
 
+$headers = getallheaders();
+$authorizationHeader = $headers['Authorization'] ?? null;
+$token = $authorizationHeader;
+
+if(!isset($token)){
+    header('WWW-Authenticate: Basic realm="API"');
+} else {
+    if($token !== $dados['api_token']) {
+        header('WWW-Authenticate: Basic realm="API"');
+        echo Response::json(401, 'Não Autorizado', "");
+    } else {
 if(isset($_GET['id'])) {
     $id = $_GET['id'];
     if($id < 0 || $id > count($data) -1 ) {
@@ -32,6 +44,7 @@ if(isset($_GET['id'])) {
     }
 
 }
+    }}
 
 ?>
 

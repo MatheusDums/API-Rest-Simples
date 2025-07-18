@@ -2,6 +2,19 @@
 require_once '../config/index.php';
 require_once '../config/resposta.php';
 require_once '../config/dados.php';
+require_once '../config/conector.php';
+
+$headers = getallheaders();
+$authorizationHeader = $headers['Authorization'] ?? null;
+$token = $authorizationHeader;
+
+if(!isset($token)){
+    header('WWW-Authenticate: Basic realm="API"');
+} else {
+    if($token !== $dados['api_token']) {
+        header('WWW-Authenticate: Basic realm="API"');
+        echo Response::json(401, 'Não Autorizado', "");
+    } else {
 
 $dados = file_get_contents("php://input");
 $dados_log = json_decode($dados, true);
@@ -23,4 +36,6 @@ if($indice_remover !== null) {
     file_put_contents('../config/dados.php', '<?php $data = ' .  var_export($data, true) . ';');
         
     echo "Elemento Id $id_remover removido com sucesso!";
+
+    }}
 ?>

@@ -10,7 +10,7 @@
   1 => 
   array (
     'id' => 1,
-    'nome' => 'Matheus Kauan Dums',
+    'nome' => 'Matheus Dums',
     'idade' => 21,
     'email' => 'dumss@icloud.com',
     'senha' => '12345',
@@ -34,17 +34,25 @@
   4 => 
   array (
     'id' => 4,
-    'nome' => 'Matheus',
-    'idade' => 21,
-    'email' => 'dumss@icloud.com.br',
-    'senha' => '12345',
+    'nome' => 'Maria E',
+    'idade' => 20,
+    'email' => 'maria@hotmail.com.br',
+    'senha' => '123456',
   ),
   5 => 
   array (
     'id' => 5,
-    'nome' => 'Joao',
-    'idade' => 18,
-    'email' => 'joao@gmail.com.r',
-    'senha' => 'teste',
+    'nome' => 'Maria du',
+    'idade' => 20,
+    'email' => 'maria@email.com.br',
+    'senha' => '123456',
+  ),
+  6 => 
+  array (
+    'id' => 6,
+    'nome' => 'Maria Eduuuarda',
+    'idade' => 20,
+    'email' => 'maria@icloud.com.br',
+    'senha' => '123456',
   ),
 );
